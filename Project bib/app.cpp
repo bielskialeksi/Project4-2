@@ -40,38 +40,58 @@ void app::sup_rappel() {
 	int test_rep = 0;
 	do {
 		if (test_rep == 0) {
-			cout << "qu'elle rappel voulez vous suprimez. \n";
+			cout << "qu'elle rappel voulez vous suprimez.(0:annuler) \n";
 		}
 		else {
 			cout << "Veuillez rechoisir, car ce rappel n'existe pas. \n";
 		}
-		cout << this->bib.size();
+		cout << this->bib.size()<<"\n";
 		cin >> sup;
 
 
 		test_rep++;
-	} while (this->bib.size()+1 < sup || sup <= 0);
+	} while (this->bib.size() < sup || sup < 0);
 	
 
+	if (sup == 0) {
+		cout << "operation annuler\n";
+	}
+	else {
 
-	vector <biberon> tpm;
 
-	for (int i = 0; i < sup + 1; i++)
-	{
-		int size = this->bib.size();
-		tpm.push_back(this->bib[size - 1]);
+		vector <biberon> tpm;
+		cout << "phase1";
+
+		for (int i = 0; i < sup + 1; i++)
+		{
+			cout << "phase1.1";
+			int size_1 = this->bib.size();
+
+			tpm.push_back(this->bib[size_1]);
+
+			cout << "phase1.2";
+
+			this->bib.pop_back();
+
+			cout << "phase1.3";
+
+		}
+		cout << "phase2";
 		this->bib.pop_back();
+		cout << "phase3";
+		int size_tpm = tpm.size();
+		cout << "phase4";
+		for (int i = 0; i < size_tpm; i++)
+		{
+			
+			int size = tpm.size();
+			this->bib.push_back(tpm[size - 1]);
+			tpm.pop_back();
 
+		}
+		cout << "phase5";
 	}
-	this->bib.pop_back();
-	int size_tpm = tpm.size();
-	for (int i = 0; i < size_tpm; i++)
-	{
-		int size = tpm.size();
-		this->bib.push_back(tpm[size - 1]);
-		tpm.pop_back();
-
-	}
+	
 
 
 
