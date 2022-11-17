@@ -33,6 +33,9 @@ int app::heure_rappel() {
 
 
 void app::sup_rappel() {
+
+	
+
 	int sup;
 	int test_rep = 0;
 	do {
@@ -42,13 +45,13 @@ void app::sup_rappel() {
 		else {
 			cout << "Veuillez rechoisir, car ce rappel n'existe pas. \n";
 		}
-
+		cout << this->bib.size();
 		cin >> sup;
 
 
 		test_rep++;
-	} while (this->bib.size() < sup || sup <= 0);
-
+	} while (this->bib.size()+1 < sup || sup <= 0);
+	
 
 
 	vector <biberon> tpm;

@@ -2,12 +2,12 @@
 
 #include <SDL.h>
 
-class addButton
+class modifBibButton
 {
 public:
 
-    addButton();
-    ~addButton();
+    modifBibButton();
+    ~modifBibButton();
     void setPosition(int x, int y);
     int handleEvent(SDL_Event event);
     SDL_Renderer* GetRenderer();

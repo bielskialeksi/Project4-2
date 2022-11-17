@@ -2,12 +2,12 @@
 
 #include <SDL.h>
 
-class addButton
+class courseButton
 {
 public:
 
-    addButton();
-    ~addButton();
+    courseButton();
+    ~courseButton();
     void setPosition(int x, int y);
     int handleEvent(SDL_Event event);
     SDL_Renderer* GetRenderer();

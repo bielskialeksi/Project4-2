@@ -137,7 +137,10 @@
     <ClInclude Include="app.h" />
     <ClInclude Include="biberon.h" />
     <ClInclude Include="constants.h" />
+    <ClInclude Include="courseButton.h" />
+    <ClInclude Include="listeCourseButton.h" />
     <ClInclude Include="MainSDLWindow.h" />
+    <ClInclude Include="modifBibButton.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Course.h" />
   </ItemGroup>
@@ -146,8 +149,11 @@
     <ClCompile Include="app.cpp" />
     <ClCompile Include="biberon.cpp" />
     <ClCompile Include="Course.cpp" />
+    <ClCompile Include="courseButton.cpp" />
+    <ClCompile Include="listeCourseButton.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainSDLWIndow.cpp" />
+    <ClCompile Include="modifBibButton.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,4 +1,4 @@
-#include "addButton.h"
+#include "courseButton.h"
 #include "constants.h"
 
 #include<iostream>
@@ -8,26 +8,26 @@
 
 
 
-addButton::addButton() {
+courseButton::courseButton() {
 	this->mPosition.x = 0;
 	this->mPosition.y = 0;
 	this->w = WIDTH / 2 - 40;
 	this->h = 100;
 }
 
-addButton::~addButton() {
-	
+courseButton::~courseButton() {
+
 }
 
-void addButton::setPosition(int x, int y) {
+void courseButton::setPosition(int x, int y) {
 	this->mPosition.x = x;
 	this->mPosition.y = y;
 }
 
-int addButton::handleEvent(SDL_Event event) {
-	
+int courseButton::handleEvent(SDL_Event event) {
+
 	if (event.type) {
-		
+
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		bool inside = true;
@@ -47,22 +47,22 @@ int addButton::handleEvent(SDL_Event event) {
 			return 0;
 		}
 		else {
-			
+
 			return 1;
 		}
 	}
 }
 
-void addButton::Init0(SDL_Renderer* renderer) {
+void courseButton::Init0(SDL_Renderer* renderer) {
 
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-	SDL_Rect fillRect = { 20, HEIGHT / 2 + 160, WIDTH / 2 - 40, 100 };
+	SDL_Rect fillRect = { WIDTH / 2 + 20, HEIGHT / 2 + 160, WIDTH / 2 - 40, 100 };
 	SDL_RenderFillRect(renderer, &fillRect);
 }
 
-void addButton::Init1(SDL_Renderer* renderer) {
+void courseButton::Init1(SDL_Renderer* renderer) {
 
 	SDL_SetRenderDrawColor(renderer, 220, 220, 220, 255);
-	SDL_Rect fillRect = { 20, HEIGHT / 2 + 160, WIDTH / 2 - 40, 100 };
+	SDL_Rect fillRect = { WIDTH / 2 + 20, HEIGHT / 2 + 160, WIDTH / 2 - 40, 100 };
 	SDL_RenderFillRect(renderer, &fillRect);
 }

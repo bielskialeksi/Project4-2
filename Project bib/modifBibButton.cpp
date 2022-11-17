@@ -1,4 +1,4 @@
-#include "addButton.h"
+#include "modifBibButton.h"
 #include "constants.h"
 
 #include<iostream>
@@ -8,26 +8,26 @@
 
 
 
-addButton::addButton() {
+modifBibButton::modifBibButton() {
 	this->mPosition.x = 0;
 	this->mPosition.y = 0;
 	this->w = WIDTH / 2 - 40;
 	this->h = 100;
 }
 
-addButton::~addButton() {
-	
+modifBibButton::~modifBibButton() {
+
 }
 
-void addButton::setPosition(int x, int y) {
+void modifBibButton::setPosition(int x, int y) {
 	this->mPosition.x = x;
 	this->mPosition.y = y;
 }
 
-int addButton::handleEvent(SDL_Event event) {
-	
+int modifBibButton::handleEvent(SDL_Event event) {
+
 	if (event.type) {
-		
+
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		bool inside = true;
@@ -47,22 +47,24 @@ int addButton::handleEvent(SDL_Event event) {
 			return 0;
 		}
 		else {
-			
+
 			return 1;
 		}
 	}
 }
 
-void addButton::Init0(SDL_Renderer* renderer) {
+void modifBibButton::Init0(SDL_Renderer* renderer) {
 
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-	SDL_Rect fillRect = { 20, HEIGHT / 2 + 160, WIDTH / 2 - 40, 100 };
+	SDL_Rect fillRect = { 20, HEIGHT / 2 + 320, WIDTH / 2 - 40, 100 };
 	SDL_RenderFillRect(renderer, &fillRect);
+	
 }
 
-void addButton::Init1(SDL_Renderer* renderer) {
+void modifBibButton::Init1(SDL_Renderer* renderer) {
 
 	SDL_SetRenderDrawColor(renderer, 220, 220, 220, 255);
-	SDL_Rect fillRect = { 20, HEIGHT / 2 + 160, WIDTH / 2 - 40, 100 };
+	SDL_Rect fillRect = { 20, HEIGHT / 2 + 320, WIDTH / 2 - 40, 100 };
 	SDL_RenderFillRect(renderer, &fillRect);
+	
 }
