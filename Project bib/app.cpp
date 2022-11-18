@@ -62,12 +62,10 @@ void app::sup_rappel() {
 		vector <biberon> tpm;
 		cout << "phase1";
 
-		for (int i = 0; i < sup + 1; i++)
+		for (int i = sup; i > 0 + 1; i--)
 		{
 			cout << "phase1.1";
-			int size_1 = this->bib.size();
-
-			tpm.push_back(this->bib[size_1]);
+			tpm.push_back(this->bib[i]);
 
 			cout << "phase1.2";
 
@@ -76,20 +74,20 @@ void app::sup_rappel() {
 			cout << "phase1.3";
 
 		}
-		cout << "phase2";
+		
 		this->bib.pop_back();
-		cout << "phase3";
+		
 		int size_tpm = tpm.size();
-		cout << "phase4";
-		for (int i = 0; i < size_tpm; i++)
+		
+		for (int i = size_tpm; i > 0 ; i--)
 		{
 			
-			int size = tpm.size();
-			this->bib.push_back(tpm[size - 1]);
+			
+			this->bib.push_back(tpm[i]);
 			tpm.pop_back();
 
 		}
-		cout << "phase5";
+		
 	}
 	
 
